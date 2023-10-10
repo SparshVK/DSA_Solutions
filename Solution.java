@@ -1,5 +1,6 @@
 // import java.util.*;
 class Solution {
+	
 	public static long reverseBits(long n) {
 		// Write your code here
 		long j=0;
@@ -15,15 +16,16 @@ class Solution {
         }
    
 
-int pos = 32 - c; // counting the no. of zeros to be added at end
+	int pos = 32 - c; // counting the no. of zeros to be added at end
 
-for(long i=j;i!=0;i=i/10)
+	for(long i=j;i!=0;i=i/10)
 		{
            l = l + (int) (Math.pow(2,pos++))*(i%10);
         }
 
-return l;
-    }
+	return l;
+}
+	// ------------------------------------------------------------------------
 
         public static int reverse(int x) {
             // System.out.println(Integer.MAX_VALUE);
@@ -37,7 +39,7 @@ return l;
                 return z;
             }
         }
-
+// --------------------------------------------------------------
 
 static void Palindrome(int x){    
     int z=0;
@@ -50,7 +52,9 @@ static void Palindrome(int x){
     System.out.println("Not Palindrome");
             
 }
+	// ----------------------------------------------------------------
 
+	// Time Complexity O(log(n))
 public static int calcGCD(int n, int m){
     // Write your code here.
     if(n==m) return m;
@@ -74,19 +78,25 @@ public static int calcGCD(int n, int m){
         c=m/i;
     }
 }
-    return c;
-    // int s = Math.min(n,m);
-    // while(i <= s)
-    // {
-    //     if(n % i == 0 && m % i == 0)
-    //     c = i;
-    //         i++;
-    // }
+    return c;   
+}
+// -----------------------------------------------------------
+	// Time Complexity O(n)
+	 public static int calcGCD(int n, int m){
+    // Write your code here.
+    int i =1,c=0;
+    int s = Math.min(n,m);
+    while(i <= s)
+    {
+        if(n%i == 0 && m%i == 0)
+        c = i;
+            i++;
+    }
    
-    // return c;
+    return c;
    
 }
-
+// -----------------------------------------------------
 
     public static void main(String[] args) {
         // Scanner in = new Scanner(System.in);
