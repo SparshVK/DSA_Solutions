@@ -1,0 +1,47 @@
+Time Complexity : O(n)
+
+public static int calcGCD(int n, int m){
+    // Write your code here.
+    int i =1,c=0;
+    int s = Math.min(n,m);
+    while(i <= s)
+    {
+        if(n%i == 0 && m%i == 0)
+        c = i;
+            i++;
+    }
+   
+    return c;
+   
+}
+
+
+
+----------------------------------------------------------------------------
+
+Time Complexity : O(log(n))
+
+public static int calcGCD(int n, int m){
+    // Write your code here.
+    int i =1,c=1;
+    int n1 = (int)Math.sqrt(n),m1 = (int)Math.sqrt(m);
+    for(i=2; i <= Math.max(n1,m1); i++){
+    
+        if(n%i == 0 && m%i == 0)
+        {
+            if(i>c)
+        c=i;
+    }
+        if(n/i != 0 && n%(n/i) == 0 && m%(n/i) == 0)
+        {
+            if(n/i > c)
+        c=n/i;}
+
+        if(m/i != 0 && n%(m/i) == 0 && m%(m/i) == 0)
+        {
+            if(m/i > c)
+        c=m/i;
+    }
+} // for
+    return c;
+}
