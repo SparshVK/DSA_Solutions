@@ -1,2 +1,2 @@
 # DSA_Solutions
-Solution of Striver's DSA sheet
+Practising the Striver's DSA sheet
